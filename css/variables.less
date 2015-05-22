@@ -1,0 +1,84 @@
+/* variables.less */
+
+// --------------------------------------------------------------
+// GLOBAL VARIABLES
+
+// --------------------------------------------------------------
+// branding colours (websafe and source)
+
+@brand1: #00565F; // dark green (logo work)
+@brand2: #22BCB9; // blue green (logo health)
+@brand3: #242424; // black (title headers)
+@brand4: #9D3393; // purple (logo life)
+@brand5: transparent; // no image backgrounds
+@brand6: #E6E7E8; // gray (header bg)
+
+// --------------------------------------------------------------
+// CSS3 media query break points
+
+// phone
+@max-phone: 479px;
+@min-phone: 480px;
+
+// tablet
+@max-tablet: 767px;
+@min-tablet: 768px;
+
+// desktop
+@max-desk: 979px;
+@min-desk: 980px;
+
+// widescreen
+@max-wide: 1199px;
+@min-wide: 1200px;
+
+// --------------------------------------------------------------
+// CSS3 media query statements
+@visible_phone_portrait: ~"(max-width: @{max-phone})";
+@visible_phone: ~"(max-width: @{max-tablet})";
+@visible_tablet: ~"(min-width: @{min-tablet}) and (max-width: @{max-desk})";
+@visible_desktop: ~"(min-width: @{min-desk})";
+@visible_desktop_only: ~"(min-width: @{min-desk}) and (max-width: @{max-wide})";
+@visible_wide: ~"(min-width: @{min-wide})";
+
+@hidden_phone_portrait: ~"(min-width: @{min-phone})";
+@hidden_phone: ~"(min-width: @{min-tablet})";
+@hidden_tablet: ~"(max-width: @{max-tablet}), (min-width: @{min-desk})";
+@hidden_desktop: ~"(max-width: @{max-desk})";
+@hidden_desktop_only: ~"(max-width: @{max-desk}), (min-width: @{min-desk})";
+@hidden_wide: ~"(max-width: @{max-wide})";
+
+
+// --------------------------------------------------------------
+// font families
+
+// font1-family
+@font1-mode: ignore; // default or ignore
+@font1-family: "Tahoma", "Verdana", "Geneva", "sans-serif";
+@font1-title: "Tahoma Webfont";
+@font1-filename: "fonts/tahoma-regular";
+@font1-svghash: "TahomaRegular";
+@font1-weight: normal;
+@font1-style: normal;
+@font1-varient: normal;
+
+
+// mono-spaced font-family
+@mono-font-family: "Lucida Console", Monaco, "Courier New", monospace;
+
+
+// Tooltips and popovers
+// -------------------------
+@tooltipColor:            #fff;
+@tooltipBackground:       #000;
+@tooltipArrowWidth:       5px;
+@tooltipArrowColor:       @tooltipBackground;
+
+@popoverBackground:       #fff;
+@popoverArrowWidth:       10px;
+@popoverArrowColor:       #fff;
+@popoverTitleBackground:  darken(@popoverBackground, 3%);
+
+// Special enhancement for popovers
+@popoverArrowOuterWidth:  @popoverArrowWidth + 1;
+@popoverArrowOuterColor:  rgba(0,0,0,.25);
